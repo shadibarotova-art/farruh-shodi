@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приглашение на свадьбу | Фаррух & Шоди</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #5a4c3e;
+            background-color: #fefaf6;
+            line-height: 1.6;
+            text-align: center;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 10px;
+        }
+
+        header {
+            padding: 60px 20px 40px;
+            background: linear-gradient(rgba(255, 250, 246, 0.9), rgba(255, 250, 246, 0.9)), url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover no-repeat;
+            background-color: #f8f2e9;
+            border-bottom: 1px solid #e8ddd0;
+        }
+
+        .names {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.5em;
+            color: #b8866b;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-size: 1.8em;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            color: #8a6d4d;
+        }
+
+        .date-place {
+            font-size: 1.4em;
+            margin: 30px 0;
+            color: #7a6248;
+        }
+
+        .date-place i {
+            color: #b8866b;
+            margin-right: 10px;
+        }
+
+        section {
+            padding: 40px 20px;
+            margin: 20px 0;
+            border-bottom: 1px dashed #d8c9b6;
+        }
+
+        h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2em;
+            color: #a07855;
+            margin-bottom: 25px;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 1px;
+            background: #d8c9b6;
+            bottom: -10px;
+            left: 25%;
+        }
+
+        .timer {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 30px 0;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .timer-box {
+            background: #fff;
+            border: 1px solid #e8ddd0;
+            border-radius: 10px;
+            padding: 15px 10px;
+            min-width: 70px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+
+        .timer-number {
+            font-size: 2em;
+            font-weight: 600;
+            color: #b8866b;
+            display: block;
+        }
+
+        .timer-label {
+            font-size: 0.9em;
+            color: #8a6d4d;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .program-list, .contact-list {
+            list-style: none;
+            text-align: left;
+            max-width: 500px;
+            margin: 20px auto;
+        }
+
+        .program-list li, .contact-list li {
+            padding: 12px 15px;
+            border-bottom: 1px solid #f0e6d8;
+            display: flex;
+            align-items: center;
+        }
+
+        .program-list li:last-child, .contact-list li:last-child {
+            border-bottom: none;
+        }
+
+        .program-list i, .contact-list i {
+            color: #b8866b;
+            width: 30px;
+            font-size: 1.2em;
+            text-align: center;
+            margin-right: 15px;
+        }
+
+        .rsvp-button {
+            display: inline-block;
+            background-color: #b8866b;
+            color: white;
+            padding: 16px 40px;
+            font-size: 1.2em;
+            text-decoration: none;
+            border-radius: 50px;
+            margin: 25px 0;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(184, 134, 107, 0.3);
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .rsvp-button:hover {
+            background-color: #a07855;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(184, 134, 107, 0.4);
+        }
+
+        footer {
+            padding: 30px 20px;
+            color: #8a6d4d;
+            font-size: 0.9em;
+            background-color: #f8f2e9;
+            margin-top: 30px;
+        }
+
+        .heart {
+            color: #e25555;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* Для мобильных */
+        @media (max-width: 480px) {
+            .names { font-size: 2.8em; }
+            h1 { font-size: 1.5em; }
+            .date-place { font-size: 1.1em; }
+            h2 { font-size: 1.8em; }
+            .timer-box { min-width: 60px; padding: 12px 8px; }
+            .timer-number { font-size: 1.7em; }
+            .rsvp-button { padding: 14px 30px; font-size: 1.1em; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="names">Фаррух & Шоди</div>
+            <h1>Приглашаем вас разделить с нами радость нашего свадебного торжества</h1>
+            <div class="date-place">
+                <p><i class="far fa-calendar-alt"></i> <strong>15 Сентября 2024</strong></p>
+                <p><i class="fas fa-map-marker-alt"></i> <strong>Ресторан "Сароб", Душанбе</strong></p>
+            </div>
+        </header>
+
+        <section id="timer">
+            <h2>До нашего дня осталось</h2>
+            <div class="timer" id="countdown">
+                <div class="timer-box"><span class="timer-number">0</span><span class="timer-label">Дней</span></div>
+                <div class="timer-box"><span class="timer-number">0</span><span class="timer-label">Часов</span></div>
+                <div class="timer-box"><span class="timer-number">0</span><span class="timer-label">Минут</span></div>
+                <div class="timer-box"><span class="timer-number">0</span><span class="timer-label">Секунд</span></div>
+            </div>
+        </section>
+
+        <section id="program">
+            <h2>Программа дня</h2>
+            <ul class="program-list">
+                <li><i class="fas fa-glass-cheers"></i> <strong>16:00</strong> — Сбор гостей, фуршет</li>
+                <li><i class="fas fa-heart"></i> <strong>17:30</strong> — Церемония бракосочетания</li>
+                <li><i class="fas fa-utensils"></i> <strong>18:30</strong> — Свадебный ужин</li>
+                <li><i class="fas fa-music"></i> <strong>20:00</strong> — Танцы и праздничная программа</li>
+                <li><i class="fas fa-fireworks"></i> <strong>23:00</strong> — Завершение праздника</li>
+            </ul>
+        </section>
+
+        <section id="rsvp">
+            <h2>Подтвердите ваше присутствие</h2>
+            <p>Пожалуйста, дайте нам знать, сможете ли вы разделить с нами этот особенный день.</p>
+            <a href="mailto:ВАШ_EMAIL@mail.ru?subject=Подтверждение присутствия на свадьбе Фарруха и Шоди&body=Здравствуйте! Я подтверждаю своё присутствие на вашей свадьбе.%0D%0A%0D%0AИмя:%0D%0AКоличество гостей:%0D%0AПожелания или особенности питания:%0D%0A%0D%0AС уважением," class="rsvp-button">Ответить на приглашение</a>
+            <p style="margin-top: 15px; font-size: 0.9em; color: #8a6d4d;"><i>Нажмите на кнопку, чтобы отправить нам email</i></p>
+        </section>
+
+        <section id="contacts">
+            <h2>Контакты</h2>
+            <ul class="contact-list">
+                <li><i class="fas fa-user"></i> <strong>Фаррух:</strong> +992 123 45 67 89</li>
+                <li><i class="fas fa-user"></i> <strong>Шоди:</strong> +992 987 65 43 21</li>
+                <li><i class="fas fa-info-circle"></i> По всем вопросам в день свадьбы звоните организатору: +992 900 00 00 00</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>Мы с нетерпением ждём встречи с вами в этот особенный день!</p>
+            <p style="margin-top: 10px;">С любовью, Фаррух и Шоди <span class="heart">❤</span></p>
+        </footer>
+    </div>
+
+    <script>
+        // ⚠️ ИЗМЕНИТЕ ДАТУ СВАДЬБЫ ЗДЕСЬ!
+        // Формат: 'ГОД-МЕСЯЦ-ДЕНЬTЧАС:МИНУТА'
+        // Пример: '2024-09-15T16:00:00' - 15 сентября 2024, 16:00
+        const weddingDate = new Date('2024-09-15T16:00:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const timeLeft = weddingDate - now;
+
+            if (timeLeft < 0) {
+                document.getElementById('countdown').innerHTML = '<h3 style="color:#b8866b;">Свадьба состоялась! Спасибо, что были с нами!</h3>';
+                return;
+            }
+
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60
